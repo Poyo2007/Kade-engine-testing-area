@@ -965,8 +965,11 @@ class PlayState extends MusicBeatState
 		
 		CounterTxt = new FlxText(0, 300, 1280, "Nothing", 20);
 		CounterTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
-		CounterTxt.text = "Sick's: " + sicks + "\nGood's: " + goods + "\nBad's: " + bads + "\nShit's: " + shits;
-		
+		CounterTxt.text = "Sick's: " + sicks +
+      "\nGood's: " + goods +
+      "\nBad's: " + bads +
+      "\nShit's: " + shits;
+		add(CounterTxt);
 		
 		if (loadRep)
 		{
