@@ -965,10 +965,6 @@ class PlayState extends MusicBeatState
 		
 		CounterTxt = new FlxText(0, 300, 1280, "Nothing", 20);
 		CounterTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
-		CounterTxt.text = "Sick's: " + sicks +
-      "\nGood's: " + goods +
-      "\nBad's: " + bads +
-      "\nShit's: " + shits;
 		add(CounterTxt);
 		
 		if (loadRep)
@@ -997,6 +993,7 @@ class PlayState extends MusicBeatState
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
+		CounterTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
 		if (FlxG.save.data.songPosition)
 		{
@@ -1716,6 +1713,13 @@ class PlayState extends MusicBeatState
 
 		if (FlxG.save.data.botplay && FlxG.keys.justPressed.ONE)
 			camHUD.visible = !camHUD.visible;
+
+
+
+		CounterTxt.text = "Sick's: " + sicks +
+      "\nGood's: " + goods +
+      "\nBad's: " + bads +
+      "\nShit's: " + shits;
 
 		if (executeModchart && luaModchart != null && songStarted)
 		{
