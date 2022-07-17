@@ -155,9 +155,9 @@ class OptionsMenu extends MusicBeatState
 				{
 					if (FlxG.keys.pressed.SHIFT)
 						{
-							if (controls_RIGHT_P)
+							if (controls.RIGHT_P)
 								currentSelectedCat.getOptions()[curSelected].right();
-							if (controls_LEFT_P)
+							if (controls.LEFT_P)
 								currentSelectedCat.getOptions()[curSelected].left();
 						}
 					else
