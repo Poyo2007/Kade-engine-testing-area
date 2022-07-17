@@ -89,7 +89,7 @@ class Main extends Sprite
 
 		addChild(game);
 
-		fpsCounter = new CoolerFPS(10, 3, 0xFFFFFF);
+		fpsCounter = new FPS(10, 3, 0xFFFFFF);
 		addChild(fpsCounter);
 		toggleFPS(FlxG.save.data.fps);
 	}

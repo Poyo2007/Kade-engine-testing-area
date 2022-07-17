@@ -18,8 +18,6 @@ import lime.utils.Assets;
 
 class OptionsMenu extends MusicBeatState
 {
-  Paths.clearStoredMemory();
-	Paths.clearUnusedMemory();
 	public static var instance:OptionsMenu;
 
 	var selector:FlxText;
@@ -69,6 +67,9 @@ class OptionsMenu extends MusicBeatState
 	var blackBorder:FlxSprite;
 	override function create()
 	{
+	  Paths.clearStoredMemory();
+	  Paths.clearUnusedMemory();
+
 		instance = this;
 		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image("menuDesat"));
 

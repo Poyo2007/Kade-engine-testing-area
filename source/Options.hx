@@ -2,7 +2,7 @@ package;
 
 import lime.app.Application;
 import lime.system.DisplayMode;
-import flixel.util.FlxColor;
+ flixel.util.FlxColor;
 import Controls.KeyboardScheme;
 import flixel.FlxG;
 import openfl.display.FPS;
@@ -137,6 +137,28 @@ class DownscrollOption extends Option
 	private override function updateDisplay():String
 	{
 		return FlxG.save.data.downscroll ? "Downscroll" : "Upscroll";
+	}
+}
+
+class OptiOption extends Option
+{
+
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		FlxG.save.data.opti = !FlxG.save.data.opti;
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return FlxG.save.data.downscroll ? "Optimization Mode On" : "Optimization Mode Off";
 	}
 }
 
