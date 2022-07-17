@@ -158,7 +158,7 @@ class OptiOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return FlxG.save.data.downscroll ? "Optimization Mode On" : "Optimization Mode Off";
+		return FlxG.save.data.opti ? "Optimization Mode On" : "Optimization Mode Off";
 	}
 }
 

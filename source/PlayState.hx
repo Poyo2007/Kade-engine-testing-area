@@ -182,6 +182,7 @@ class PlayState extends MusicBeatState
 	var songScoreDef:Int = 0;
 	var scoreTxt:FlxText;
 	var replayTxt:FlxText;
+	var CounterTxt:FlxText;
 
 	public static var campaignScore:Int = 0;
 
@@ -961,6 +962,12 @@ class PlayState extends MusicBeatState
 		replayTxt = new FlxText(healthBarBG.x + healthBarBG.width / 2 - 75, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "REPLAY", 20);
 		replayTxt.setFormat(Paths.font("vcr.ttf"), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		replayTxt.scrollFactor.set();
+		
+		CounterTxt = new FlxText(0, 300, 1280, "Nothing", 20);
+		CounterTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+		CounterTxt.text = "Sick's: " + sicks + "\nGood's: " + goods + "\nBad's: " + bads + "\nShit's: " + shits;
+		
+		
 		if (loadRep)
 		{
 			add(replayTxt);

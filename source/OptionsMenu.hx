@@ -162,9 +162,9 @@ class OptionsMenu extends MusicBeatState
 						}
 					else
 					{
-						if (controls.LEFT_P)
-							currentSelectedCat.getOptions()[curSelected].right();
 						if (controls.RIGHT_P)
+							currentSelectedCat.getOptions()[curSelected].right();
+						if (controls.LEFT_P)
 							currentSelectedCat.getOptions()[curSelected].left();
 					}
 				}
