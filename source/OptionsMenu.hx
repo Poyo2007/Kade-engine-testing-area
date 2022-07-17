@@ -18,6 +18,8 @@ import lime.utils.Assets;
 
 class OptionsMenu extends MusicBeatState
 {
+  Paths.clearStoredMemory();
+	Paths.clearUnusedMemory();
 	public static var instance:OptionsMenu;
 
 	var selector:FlxText;
